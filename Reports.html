@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отчеты</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        .navbar {
+            background-color: #ffcc00;
+        }
+        .navbar-brand {
+            color: #000;
+            font-weight: bold;
+        }
+        .btn-yellow {
+            background-color: #ffcc00;
+            color: #000;
+            border: none;
+        }
+        .btn-yellow:hover {
+            background-color: #e6b800;
+        }
+        .card {
+            background-color: #333;
+            color: #fff;
+        }
+        .footer {
+            background-color: #222;
+            color: #ffcc00;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TaxiManager</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Дашборд</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Водители</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Машины</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Заказы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Отчеты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center py-5">
+        <h1 class="fw-bold">Отчеты</h1>
+        <p class="lead">Анализ деятельности таксопарка</p>
+    </header>
+
+    <main class="container py-5">
+        <div class="row">
+            <!-- Краткие отчёты -->
+            <div class="col-md-4">
+                <div class="card text-center p-3 mb-4">
+                    <h3>Доходы</h3>
+                    <p class="fs-2 fw-bold">450,000 ₽</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center p-3 mb-4">
+                    <h3>Выплаты водителям</h3>
+                    <p class="fs-2 fw-bold">200,000 ₽</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center p-3 mb-4">
+                    <h3>Расходы на сервис</h3>
+                    <p class="fs-2 fw-bold">80,000 ₽</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Раздел графиков -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card p-3 mb-4">
+                    <h3>Доходы по неделям</h3>
+                    <canvas id="incomeChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3 mb-4">
+                    <h3>Эффективность водителей</h3>
+                    <canvas id="driverEfficiencyChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 TaxiManager. Все права защищены.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // График доходов
+        const incomeCtx = document.getElementById('incomeChart').getContext('2d');
+        new Chart(incomeCtx, {
+            type: 'line',
+            data: {
+                labels: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+                datasets: [{
+                    label: 'Доходы (₽)',
+                    data: [70000, 80000, 60000, 75000, 90000, 85000, 95000],
+                    borderColor: '#ffcc00',
+                    backgroundColor: 'rgba(255, 204, 0, 0.2)',
+                }]
+            },
+        });
+
+        // График эффективности водителей
+        const driverEfficiencyCtx = document.getElementById('driverEfficiencyChart').getContext('2d');
+        new Chart(driverEfficiencyCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Иванов', 'Петров', 'Сидоров', 'Кузнецов'],
+                datasets: [{
+                    label: 'Количество выполненных заказов',
+                    data: [40, 50, 35, 45],
+                    backgroundColor: '#ffcc00',
+                }]
+            },
+        });
+    </script>
+</body>
+</html>

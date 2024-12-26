@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление водителями и транспортными средствами</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        .navbar {
+            background-color: #ffcc00;
+        }
+        .navbar-brand {
+            color: #000;
+            font-weight: bold;
+        }
+        .btn-yellow {
+            background-color: #ffcc00;
+            color: #000;
+            border: none;
+        }
+        .btn-yellow:hover {
+            background-color: #e6b800;
+        }
+        .card {
+            background-color: #333;
+            color: #fff;
+        }
+        .footer {
+            background-color: #222;
+            color: #ffcc00;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TaxiManager</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Панель управления</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Водители</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Транспортные средства</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Отчёты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center py-5">
+        <h1 class="fw-bold">Управление водителями и транспортными средствами</h1>
+        <p class="lead">Эффективное управление водителями и транспортными средствами</p>
+    </header>
+
+    <main class="container py-5">
+        <div class="row">
+            <!-- Раздел Водителей -->
+            <div class="col-md-6">
+                <h2 class="text-center">Водители</h2>
+                <div class="card p-3 mb-4">
+                    <h3>Добавить нового водителя</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="driverName" class="form-label">Имя</label>
+                            <input type="text" class="form-control" id="driverName" placeholder="Введите имя водителя">
+                        </div>
+                        <div class="mb-3">
+                            <label for="driverPhone" class="form-label">Телефон</label>
+                            <input type="text" class="form-control" id="driverPhone" placeholder="Введите номер телефона">
+                        </div>
+                        <button type="submit" class="btn btn-yellow">Добавить водителя</button>
+                    </form>
+                </div>
+                <div class="card p-3">
+                    <h3>Список водителей</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark text-white">Джон Доу - 123-456-7890</li>
+                        <li class="list-group-item bg-dark text-white">Джейн Смит - 987-654-3210</li>
+                        <li class="list-group-item bg-dark text-white">Майк Джонсон - 555-123-4567</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Раздел Транспортных Средств -->
+            <div class="col-md-6">
+                <h2 class="text-center">Транспортные средства</h2>
+                <div class="card p-3 mb-4">
+                    <h3>Добавить новое транспортное средство</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="vehicleModel" class="form-label">Модель</label>
+                            <input type="text" class="form-control" id="vehicleModel" placeholder="Введите модель транспортного средства">
+                        </div>
+                        <div class="mb-3">
+                            <label for="vehiclePlate" class="form-label">Госномер</label>
+                            <input type="text" class="form-control" id="vehiclePlate" placeholder="Введите госномер">
+                        </div>
+                        <button type="submit" class="btn btn-yellow">Добавить транспортное средство</button>
+                    </form>
+                </div>
+                <div class="card p-3">
+                    <h3>Список транспортных средств</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark text-white">Toyota Prius - ABC-123</li>
+                        <li class="list-group-item bg-dark text-white">Ford Focus - XYZ-456</li>
+                        <li class="list-group-item bg-dark text-white">Honda Civic - DEF-789</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 TaxiManager. Все права защищены.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

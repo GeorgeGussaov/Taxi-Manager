@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система управления такси</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        .navbar {
+            background-color: #ffcc00;
+        }
+        .navbar-brand {
+            color: #000;
+            font-weight: bold;
+        }
+        .btn-yellow {
+            background-color: #ffcc00;
+            color: #000;
+            border: none;
+        }
+        .btn-yellow:hover {
+            background-color: #e6b800;
+        }
+        .card {
+            background-color: #333;
+            color: #fff;
+        }
+        .footer {
+            background-color: #222;
+            color: #ffcc00;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TaxiManager</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Панель управления</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Водители</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Транспортные средства</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Отчёты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center py-5">
+        <h1 class="fw-bold">Добро пожаловать в TaxiManager</h1>
+        <p class="lead">Ваш инструмент для эффективного управления такси</p>
+        <a href="#" class="btn btn-yellow btn-lg">Начать</a>
+    </header>
+
+    <main class="container py-5">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h3>Мониторинг водителей</h3>
+                    <p>Отслеживайте производительность и управляйте графиками.</p>
+                    <a href="#" class="btn btn-yellow">Просмотр водителей</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h3>Управление транспортными средствами</h3>
+                    <p>Обеспечьте техническое обслуживание и доступность транспорта.</p>
+                    <a href="#" class="btn btn-yellow">Просмотр транспортных средств</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h3>Создание отчётов</h3>
+                    <p>Анализируйте данные для более обоснованных решений.</p>
+                    <a href="#" class="btn btn-yellow">Просмотр отчётов</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 TaxiManager. Все права защищены.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

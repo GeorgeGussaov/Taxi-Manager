@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление заказами</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        .navbar {
+            background-color: #ffcc00;
+        }
+        .navbar-brand {
+            color: #000;
+            font-weight: bold;
+        }
+        .btn-yellow {
+            background-color: #ffcc00;
+            color: #000;
+            border: none;
+        }
+        .btn-yellow:hover {
+            background-color: #e6b800;
+        }
+        .card {
+            background-color: #333;
+            color: #fff;
+        }
+        .footer {
+            background-color: #222;
+            color: #ffcc00;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TaxiManager</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Панель управления</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Водители</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Транспортные средства</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Заказы</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center py-5">
+        <h1 class="fw-bold">Управление заказами</h1>
+        <p class="lead">Отслеживание и управление заказами клиентов в реальном времени</p>
+    </header>
+
+    <main class="container py-5">
+        <div class="card p-3 mb-4">
+            <h3>Новые заказы</h3>
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID заказа</th>
+                        <th scope="col">Клиент</th>
+                        <th scope="col">Место подачи</th>
+                        <th scope="col">Пункт назначения</th>
+                        <th scope="col">Водитель</th>
+                        <th scope="col">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#001</td>
+                        <td>Джон Доу</td>
+                        <td>123 Main St</td>
+                        <td>456 Elm St</td>
+                        <td>Не назначен</td>
+                        <td>
+                            <button class="btn btn-yellow">Назначить водителя</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#002</td>
+                        <td>Джейн Смит</td>
+                        <td>789 Oak St</td>
+                        <td>101 Pine St</td>
+                        <td>Не назначен</td>
+                        <td>
+                            <button class="btn btn-yellow">Назначить водителя</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card p-3">
+            <h3>Активные заказы</h3>
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID заказа</th>
+                        <th scope="col">Клиент</th>
+                        <th scope="col">Место подачи</th>
+                        <th scope="col">Пункт назначения</th>
+                        <th scope="col">Водитель</th>
+                        <th scope="col">Статус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#003</td>
+                        <td>Арсен Гиоев</td>
+                        <td>Согушка</td>
+                        <td>Доватора какоето</td>
+                        <td>Артур Санакоев</td>
+                        <td>В процессе</td>
+                    </tr>
+                    <tr>
+                        <td>#004</td>
+                        <td>Крис Браун</td>
+                        <td>333 Cedar St</td>
+                        <td>909 Willow St</td>
+                        <td>Джейн Доу</td>
+                        <td>В процессе</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 TaxiManager. Все права защищены.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
